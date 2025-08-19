@@ -234,12 +234,10 @@ class DemoScene: GraphicsDelegate {
                            alpha: 1.0)
         }
         
-        /*
         triangleBuffer.render(renderEncoder: renderEncoder,
                               pipelineState: .shapeNodeColoredIndexed2DAlphaBlending)
         lineBuffer.render(renderEncoder: renderEncoder,
                           pipelineState: .shapeNodeColoredIndexed2DAlphaBlending)
-        */
         polypointBuffer.render(renderEncoder: renderEncoder,
                                pipelineState: .shapeNodeColoredIndexed2DAlphaBlending)
         
