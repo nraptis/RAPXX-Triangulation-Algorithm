@@ -58,9 +58,13 @@ class DemoScene: GraphicsDelegate {
             polypoints.append(.init(x: x, y: y))
         }
         
+        triangulate()
+    }
+    
+    func triangulate() {
         triangles = RAPXXTriangulator.shared.triangulate(points: polypoints)
         
-        for _ in triangles.indices {
+        while triangles_r.count < triangles.count {
             triangles_r.append(Float.random(in: 0.25...0.75))
             triangles_g.append(Float.random(in: 0.25...0.75))
             triangles_b.append(Float.random(in: 0.25...0.75))
